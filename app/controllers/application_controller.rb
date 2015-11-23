@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
   def set_format
  	request.format = 'json'
   end
+
+  rescue_from Exception, :with => :error_render_method
+
+  def error_render_method(exception)
+    render :json => {message: exception.message}, :status => :internal_server_error
+    true
+  end
 end
