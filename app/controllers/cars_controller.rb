@@ -13,6 +13,7 @@ class CarsController < ApplicationController
   	coordinates = coord_param.split(/,/)
   	render_message("Coordinates param must be like <lat>,<long> on GET") && return unless coordinates.length==2
   	limit = params[:limit]||LOCATIONS_DEFAULT_LIMIT
-  	render :json => Location.geo_near([coordinates[1].to_f,coordinates[0].to_f]).first(limit.to_i)
+    locations = Location.geo_near([coordinates[1].to_f,coordinates[0].to_f]).first(limit.to_i)
+  	render :json => locations
   end
 end
