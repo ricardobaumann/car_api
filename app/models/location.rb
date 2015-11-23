@@ -17,4 +17,8 @@ class Location
 
   index({coordinates: "2d"})
 
+  def self.find_near(latitude, longitude)
+
+  end
+
 end
