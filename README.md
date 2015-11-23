@@ -2,7 +2,7 @@
 
 ## Instalation
 1. Install ruby 2.2 or superior
-2. Setup a mondodb database. For local development, I used the mongo docker image, on port 27017 without authentication. For more details, see https://hub.docker.com/_/mongo/
+2. Setup a mongodb database. For local development, I used the mongo docker image, on port 27017 without authentication. For more details, see https://hub.docker.com/_/mongo/
 3. Clone repository and CD to it
 4. Run <strong>gem install bundler</strong>
 5. Run <strong>bundle install</strong>
