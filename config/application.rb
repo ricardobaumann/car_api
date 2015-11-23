@@ -29,7 +29,7 @@ module CarApi
       g.assets false
       g.helper false
       g.template_engine false
-      g.test_framework :mini_test, :spec => true, :fixture => false
+      g.test_framework :rspec, :spec => true, :fixture => false
     end
   end
 end
